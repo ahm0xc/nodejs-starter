@@ -1,11 +1,20 @@
 {
   "name": "nodejs-starter",
-  "module": "src/index.ts",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "module": "src/index.ts",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "bun run src/index.ts",
+    "dev": "bun run --watch src/index.ts"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.10.2",
+    "@types/bun": "latest",
+    "eslint": "^9.22.0",
+    "eslint-plugin-format": "^1.0.1"
   }
 }
