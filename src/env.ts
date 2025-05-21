@@ -4,8 +4,7 @@ import { z } from "zod";
 config();
 
 export const EnvSchema = z.object({
-//   NODE_ENV: z.enum(["development", "production"]),
-  FOO: z.string(),
+  FOO: z.string().optional(),
 });
 
 export type Env = z.infer<typeof EnvSchema>;
